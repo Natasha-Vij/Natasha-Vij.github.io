@@ -1,1 +1,11 @@
 # Natasha-Vij.github.io
+
+Here, you can find a compilation of my completed projects.
+
+## Hate Crimes in the United States (1991-2018)
+In this project, I analyzed hate crimes in the Unted States from 1991-2018. In particular, I looked at what groups are most likely to be targeted, what groups are more likely to commit crimes, where these crimes are happening in the country, and how major political events affect hate crime occurances. 
+
+[Click here to learn more about this project!](https://github.com/Natasha-Vij/Analysis-of-Hate-Crimes-in-US/blob/main/DATS%206103%20-%20Individual%20Project%202%20-%20Natasha%20Vij.html)
+
+
+## Military Spending Analysis
