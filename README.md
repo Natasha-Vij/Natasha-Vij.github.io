@@ -9,3 +9,7 @@ In this project, I analyzed hate crimes in the Unted States from 1991-2018. In p
 
 
 ## Military Spending Analysis
+
+In this project, I analyzed the overall military spending in light of their GDP. Specifically, I looked at the military spending of the following countries: United States, China, Russia, Germany, United Kingdom, France, Italy, Iran, Israel, Saudi Arabia between the years of 2010-2019.
+
+[Click here to learn more about this project!](Natasha-Vij.github.io/Military-Spending.html)
