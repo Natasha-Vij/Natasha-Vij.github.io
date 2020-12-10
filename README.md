@@ -7,7 +7,7 @@ The Federal Communications Commission (FCC) has created a dashboard that tracks 
 
 This data was freely available to download from the Federal Communications Commission. The dataset used in this project can be obtained [here](https://opendata.fcc.gov/Consumer/Consumer-Complaints-Data-Unwanted-Calls/vakf-fz8e).
 
-[Click here to learn more about this project!](Natasha-Vij.github.io/DATS 6103 - Individual Project 3 - Natasha Vij.html)
+[Click here to learn more about this project!] (Natasha-Vij.github.io/DATS 6103 - Individual Project 3 - Natasha Vij.html).
 
 ## Hate Crimes in the United States (1991-2018)
 In this project, I analyzed hate crimes in the Unted States from 1991-2018. In particular, I looked at what groups are most likely to be targeted, what groups are more likely to commit crimes, where these crimes are happening in the country, and how major political events affect hate crime occurances. 
