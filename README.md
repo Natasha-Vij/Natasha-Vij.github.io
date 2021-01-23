@@ -2,6 +2,14 @@
 
 On this page, you can learn more about the projects I have completed.
 
+## Analysis of Contemporary Mass Shooters in the United States
+The Stanford Geospatial Center has compiled a dataset that details incidents of mass shootings. My team and I noticed that the dataset contained dimensions related to the shooter, so we decided to craft a SMART research question that would meet all of the criteria of a SMART question. We decided to answer the following question: "Is the contemporary mass shooter in America similar to the average American demographically?"
+
+After completing an exploratory data analysis on our dataset, we determined that we would be able to test similarities based on age, race, and sex. Using both z-tests and chi-squared tests, my team and I found that the average mass shooter in America is not in fact similar to the average American. Based on our testing, we found what demographic characteristics policy makers should be focused on  in order to help stop instances of mass shootings.
+
+[Click here to learn more about this project!](Natasha-Vij.github.io/Final_Project.html).
+
+
 ## Unwanted Spam Calls in the United States
 The Federal Communications Commission (FCC) has created a dashboard that tracks unwanted calls. This dataset is updated every day with new unwanted calls reflected. The purpose of this project is to look at trends regarding unwanted spam calls. In this project, I wanted to see annual trends, where these calls are more likely to take place, when these calls are most likely to occur, which months get the most number of unwanted calls, and the methods by which consumers receive these unwanted calls. While data collection started in 2000, this data looks at data from 2014 up until November 22, 2020. This is because the FCC started regularly updating this dataset. 
 
