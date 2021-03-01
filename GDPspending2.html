@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Analysis of Military, Education, and Healthcare Spending</title>
+    <link rel="stylesheet" href="/Website_Design.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <title>Military Spending</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawAllSheets);
+
+        function drawAllSheets() {
+            drawSheetName('Military Spending USD', 'SELECT A, C, D, E, F, G', military_7_Spending);
+            drawSheetName('Education Total Spending', 'SELECT A, C, D, E, F, G', education_7_Spending);
+            drawSheetName('Healthcare Spending USD', 'SELECT A, C, D, E, F, G', healthcare_7_Spending);
+
+        } //drawAllSheets
+
+        function drawSheetName(sheetName, query, responseHandler){
+            var queryString = encodeURIComponent(query);
+            var query = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/1XpszBpPfCT3SPlwYn84d1HQNOBzGKXLPTlvgWipkkls/gviz/tq?sheet='
+                + sheetName + '&headers=1&tq=' + queryString);
+            query.send(responseHandler);
+        } //drawSheetName
+
+        function checkError(response){
+            if (response.isError()) {
+                alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+                return;
+            }
+        } //checkError
+
+        function military_7_Spending(response){
+        checkError(response);
+        var data = response.getDataTable();
+        data.sort({column: 5, desc: true});
+
+        var options = {
+            vAxis: {title: 'Spending ($)'},
+            hAxis: {title: 'Country'},
+            title: "Total Military Spending in US Dollars (2012-2016)",
+            width: 850,
+            height: 500, 
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('military_spending_7_div'));
+        chart.draw(data, options);
+        } //military_7_Spending_Handler
+
+    function education_7_Spending(response){
+        checkError(response);
+        var data = response.getDataTable();
+        data.sort({column: 5, desc: true});
+
+        var options = {
+            vAxis: {title: 'Spending ($)'},
+            hAxis: {title: 'Country'},
+            title: "Total Education Spending in US Dollars (2012-2016)",
+            width: 850,
+            height: 500, 
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('education_spending_7_div'));
+        chart.draw(data, options);
+    } //military_7_Spending_Handler
+
+    function healthcare_7_Spending(response){
+        checkError(response);
+        var data = response.getDataTable();
+        data.sort({column: 5, desc: true});
+
+        var options = {
+            vAxis: {title: 'Spending ($)'},
+            hAxis: {title: 'Country'},
+            title: "Total Healthcare Spending in US Dollars (2012-2016)",
+            width: 850,
+            height: 500, 
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('healthcare_spending_7_div'));
+        chart.draw(data, options);
+    } //military_7_Spending_Handler
+
+</script>
+
+</head>
+
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <h1>Natasha Vij</a> | <a>M.S. in Data Science Student</a></span></h1>
+                    <h2>The George Washington University</h2>
+                </div><!-- logo_text-->
+            </div><!-- logo -->
+            <div id="menubar">
+                <ul id="menu">
+                    <ul id="menu">
+                        <li><a href="/GDPObjectives.html">Project Objectives</a></li>
+                        <li><a href="/GDPspending1.html">Military, Education, and Healthcare Spending</a></li>
+                        <li class="selected"><a href="/GDPspending2.html">Total GDP Spending</a></li>
+                        <li><a href="/GDPspending3.html">Fastest Growing Countries</a></li>
+                        <li><a href="/GDPConclusions.html">Project Conclusions</a></li>
+                </ul><!-- menu -->
+            </div><!-- menubar-->
+        </div><!-- header-->
+        <div id="site_content">
+            <div id="content">
+                <h1>Analysis of Education, Healthcare, and Military Countries of G20 Countries</h1>
+                <h3>Project by: Natasha Vij</h3>
+                <h3>DATS 6401-010</h3>
+                <p></p>
+                    <h2>
+                        Section 4: Military vs. Education vs. Healthcare Total Spending
+                    </h2>
+                    <h3>
+                        Part 1: Comparing Education Spending to Country’s GDP
+                    </h3>
+                    <div id="military_spending_7_div" style="width: 100px; height:500px;"></div>
+                    <br>
+                    <div id="education_spending_7_div" style="width: 100px; height:500px;"></div>
+                    <br>
+                    <div id="healthcare_spending_7_div" style="width: 100px; height:500px;"></div>
+
+                    <h4>
+                    In this section, you can see how much each country of the G20 spends on military, education, and healthcare.
+                    This section shows how each sector compares to each other. It is clear to see that the United States regularly spends
+                    more than any other country on all three sectors; however, it is interesting to take notice of other state actors.  
+                        <p></p>
+                    Russia, for example, is second in military spending, but is 15th in overall education spending and 13th in overall healthcare spending.
+                    <p></p>
+                    Germany is ranked third in total education spending and fourth in healthcare even though it is ranked ninth in military spending. 
+                    <p></p>
+                    It is also interesting to see how Japan ranks in these three sectors. In education, is ranked fifth. In healthcare, it is ranked third. However, in military spending, it is ranked in eighth place.
+                    </h4>
+
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div> <!-- content -->
+            </div> <!-- site content -->
+        </div> <!-- main -->
+
+    <div id="content_footer">
+        <div id="footer">
+            &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> 
+            | <a href="http://validator.w3.org/check?uri=referer">HTML5</a>
+            | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS3</a>
+            | Natasha Vij
+        </div><!-- footer -->
+    </div> <!-- content_footer -->
+
+</body>
+
+</html>
+

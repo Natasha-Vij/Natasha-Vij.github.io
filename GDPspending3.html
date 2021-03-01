@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Analysis of Military, Education, and Healthcare Spending</title>
+    <link rel="stylesheet" href="/Website_Design.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <title>Military Spending</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawAllSheets);
+
+        function drawAllSheets() {
+            drawSheetName('Fastest Growing Difference', 'SELECT A, B, C, D', fastest_Growing_Difference);
+            drawSheetName('Fastest Growing Rate', 'SELECT A, B, C, D', fastest_Growing_Rate);
+        } //drawAllSheets
+
+        function drawSheetName(sheetName, query, responseHandler){
+            var queryString = encodeURIComponent(query);
+            var query = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/1XpszBpPfCT3SPlwYn84d1HQNOBzGKXLPTlvgWipkkls/gviz/tq?sheet='
+                + sheetName + '&headers=1&tq=' + queryString);
+            query.send(responseHandler);
+        } //drawSheetName
+
+        function checkError(response){
+            if (response.isError()) {
+                alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+                return;
+            }
+        } //checkError
+
+
+
+
+        function fastest_Growing_Difference(response){
+            checkError(response);
+            var data = response.getDataTable();
+            data.sort({column: 3, desc: true});
+
+            var options = {
+                vAxis: {title: 'Spending ($)'},
+                hAxis: {title: 'Country'},
+                title: "Fastest Growing Difference (2012-2016)",
+                width: 850,
+                height: 500, 
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('fastest_growing_difference_div'));
+            chart.draw(data, options);
+        } // fastest_Growing_Difference
+
+
+
+        function fastest_Growing_Rate(response){
+            checkError(response);
+            var data = response.getDataTable();
+            data.sort({column: 3, desc: true});
+
+            var options = {
+                vAxis: {title: 'Spending (%)'},
+                hAxis: {title: 'Country'},
+                title: "Fastest Growth Rate (2012-2016)",
+                width: 850,
+                height: 500, 
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('fastest_growing_rate_div'));
+            chart.draw(data, options);
+        } //fastest_Growing_Rate
+
+
+
+</script>
+
+</head>
+
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <h1>Natasha Vij</a> | <a>M.S. in Data Science Student</a></span></h1>
+                    <h2>The George Washington University</h2>
+                </div><!-- logo_text-->
+            </div><!-- logo -->
+    
+            <div id="menubar">
+                <ul id="menu">
+                    <li><a href="/GDPObjectives.html">Project Objectives</a></li>
+                    <li><a href="/GDPspending1.html">Military, Education, and Healthcare Spending</a></li>
+                    <li><a href="/GDPspending2.html">Total GDP Spending</a></li>
+                    <li class="selected"><a href="/GDPspending3.html">Fastest Growing Countries</a></li>
+                    <li><a href="/GDPConclusions.html">Project Conclusions</a></li>
+                </ul><!-- menu -->
+            </div><!-- menubar-->
+        </div><!-- header-->
+        <div id="site_content">
+            <div id="content">
+                <h1>Analysis of Education, Healthcare, and Military Countries of G20 Countries</h1>
+                <h3>Project by: Natasha Vij</h3>
+                <h3>DATS 6401-010</h3>
+                <p></p>
+                <h2>
+                    Section 5: Fastest Growing Nations
+                </h2>
+                <h3>
+                    Part 1: Fastest Growing Countries in Education 
+                </h3>
+    
+                <div id="fastest_growing_difference_div" style="width: 100px; height:500px;"></div>
+                <p></p>
+                <h4>
+                        In this section, it is clear to see that there aren't any countries in 2016 that were deviating significantly from how much they were spending in 2012. 
+                        However, it is worth stating that China, India, Korea, and the United States grew their healthcare and education spending between 2012 and 2016. 
+                        It's also interesting to see that Japan dropped its healthcare spending significantly in dollars.
+                </h4>
+                <p></p>
+                <div id="fastest_growing_rate_div" style="width: 100px; height:500px;"></div>
+                <p></p>
+                <h4>
+                   This section shows the fastest growth rate in the education, healthcare, and military sectors. It's clear to see that China leads in growth percent increase, followed by
+                   India, South Korea, and Indonesia. 
+                   <p></p>
+                    It is equally interesting to see how countries like Russia, Canada, Japan, and South Africa have significantly dropped their growth rate percent between 2012 and 2016.
+                </h4>
+                <p></p>
+                <p></p>
+                </div> <!-- content -->
+            </div> <!-- site content -->
+        </div> <!-- main -->>
+
+    <div id="content_footer">
+        <div id="footer">
+            &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> 
+            | <a href="http://validator.w3.org/check?uri=referer">HTML5</a>
+            | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS3</a>
+            | Natasha Vij
+        </div><!-- footer -->
+    </div> <!-- content_footer -->
+
+</body>
+
+</html>
