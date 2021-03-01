@@ -3,6 +3,9 @@
 On this page, you can learn more about the projects I have completed.
 
 ## Analysis of Military, Education, and Healthcare Spending
+In this project, I analyzed the overall military, education, and healthcare spending in light of their GDP. Specifically, I looked at the military, education, and healthcare spending trends of the G20 countries in the years of 2012-2016. I aimed to compare sector spending to overall GDP spending, per capita spending to overall per capita GDP spending, comparing each sector in today GDP spending, and single out fastest growing countries in all three sectors. 
+
+I obtained my datasets from SIPRI, the World Health Organization, and the World Bank.
 
 [Click here to learn more about this project!](https://Natasha-Vij.github.io/Analysis_of_Military_Education_and_Healthcare_Spending/GDPObjectives.html)
 
