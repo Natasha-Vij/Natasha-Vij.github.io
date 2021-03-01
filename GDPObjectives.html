@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Analysis of Military, Education, and Healthcare Spending</title>
+    <link rel="stylesheet" href="/Website_Design.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <title>Military Spending</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {'packages':['geochart']});
+        google.charts.setOnLoadCallback(drawAllSheets);
+
+        function drawAllSheets() {
+            drawSheetName('Average Rates', 'SELECT A, B, C', averageRates);
+        } //drawAllSheets
+
+            function drawSheetName(sheetName, query, responseHandler){
+            var queryString = encodeURIComponent(query);
+            var query = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/1XpszBpPfCT3SPlwYn84d1HQNOBzGKXLPTlvgWipkkls/gviz/tq?sheet='
+                + sheetName + '&headers=1&tq=' + queryString);
+            
+            query.send(responseHandler);
+        } //drawSheetName
+
+        function checkError(response){
+            if (response.isError()) {
+                alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+                return;
+            }
+        } //checkError
+
+
+        function averageRates(response){
+            checkError(response);
+            var data = response.getDataTable();
+            data.sort({column: 2, desc: true}); 
+
+            var options = {
+                colorAxis: {colors: ['#4a8362', '#4a8362']}, //green
+                title: 'Average GDP and Population Rates (2012-2016)',
+                legend: "none"
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('average_rates_div'));
+            chart.draw(data, options);
+        } //averageRates
+
+    </script>
+</head>
+
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <h1>Natasha Vij</a> | <a>M.S. in Data Science Student</a></span></h1>
+                    <h2>The George Washington University</h2>                
+                </div><!-- logo_text-->
+            </div><!-- logo -->
+
+            <div id="menubar">
+                <ul id="menu">
+                    <li class="selected"><a href="/GDPObjectives.html">Project Objectives</a></li>
+                    <li><a href="/GDPspending1.html">Military, Education, and Healthcare Spending</a></li>
+                    <li><a href="/GDPspending2.html">Total GDP Spending</a></li>
+                    <li><a href="/GDPspending3.html">Fastest Growing Countries</a></li>
+                    <li><a href="/GDPConclusions.html">Project Conclusions</a></li>
+                </ul><!-- menu -->
+            </div><!-- menubar -->
+        </div><!-- header -->
+
+        <div id="site_content">
+            <div class="sidebar">
+                <h1>Natasha Vij</h1>
+                <h3>Student - M.S. in Data Science | The George Washington University</h3>
+                <h4>Email me: <a href="mailto:natashavij@gwu.edu">natashavij@gwu.edu</a></h4>
+                <ul>
+                    <h4>Connect with me on <a href="https://www.linkedin.com/in/natashavij/">LinkedIn.</a></h4>
+                    <h4>Follow me on <a href="https://github.com/Natasha-Vij">GitHub.</a></h4>
+                    <h4>See my other projects on <a href="https://Natasha-Vij.github.io">GitHub (io).</a></h4>
+                </ul>
+            </div> <!-- sidebar-->
+            <div id="content">
+                <h1>Analysis of Education, Healthcare, and Military Countries of G20 Countries</h1>
+                <h3>Project by: Natasha Vij</h3>
+                <h3>DATS 6401-010</h3>
+
+                <p></p>
+                <p></p>
+                <h2>Objective:</h2>
+                    <b></b>
+                    <p>
+                    The purpose of this project is to compare the spending of all G20 countries over the past 10 years. 
+                    To do so, I will be comparing education, healthcare, and military spending to each country's respective GDP spending.
+                    The goal of this project will be to see which countries lead and fall back on spending financial resources on vital aspects of their governments. 
+                    </p>
+                <p></p>
+                <p></p>
+                
+                <h2>Average GDP Spending and Population (2012-2016)</h2>
+                <br>
+                 <div id="average_rates_div" style="width: 800px; height:500px;"></div>
+                <br>
+                
+
+                <h2>Sources:</h2>
+                <ul>
+                    <li><a href="https://data.worldbank.org/indicator/NY.ADJ.AEDU.CD">Education Dataset</a></li>
+                    <li><a href="https://www.sipri.org/databases/milex">Military Dataset</a></li>
+                    <li><a href="https://apps.who.int/nha/database">Healthcare Dataset</a></li>
+                    <li><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD">Total GDP Dataset</a></li>
+                    <li><a href="https://unsplash.com/s/photos/rain-green"> Header Photo</a></li>
+            </div><!--content-->
+        </div><!-- site_content-->
+    </div><!-- main -->
+        <div id="content_footer">
+            <div id="footer">
+                &copy; <script>var d = new Date(); document.write(d.getFullYear());</script> 
+                | <a href="http://validator.w3.org/check?uri=referer">HTML5</a>
+                | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS3</a>
+                | Natasha Vij
+            </div><!-- footer -->
+        </div><!-- content_footer -->
+    
+</body>
+
+</html>
