@@ -4,7 +4,7 @@ On this page, you can learn more about the projects I have completed.
 
 ## Analysis of Military, Education, and Healthcare Spending
 
-[Click here to learn more about this project!](Natasha-Vij.github.io/Natasha-Vij.github.io/GDPObjectives.html)
+[Click here to learn more about this project!](Natasha-Vij.github.io/GDPObjectives.html)
 
 ## Analysis of Contemporary Mass Shooters in the United States
 The Stanford Geospatial Center has compiled a dataset that details incidents of mass shootings. My team and I noticed that the dataset contained dimensions related to the shooter, so we decided to craft a SMART research question that would meet all of the criteria of a SMART question. We decided to answer the following question: "Is the contemporary mass shooter in America similar to the average American demographically?"
