@@ -14,7 +14,7 @@ The Stanford Geospatial Center has compiled a dataset that details incidents of 
 
 After completing an exploratory data analysis on our dataset, we determined that we would be able to test similarities based on age, race, and sex. Using both z-tests and chi-squared tests, my team and I found that the average mass shooter in America is not in fact similar to the average American. Based on our testing, we found what demographic characteristics policy makers should be focused on  in order to help stop instances of mass shootings.
 
-[Click here to learn more about this project!](Natasha-Vij.github.io/Final_Project.html).
+[Click here to learn more about this project!](Natasha-Vij.github.io/Final_Project.html)
 
 
 ## Unwanted Spam Calls in the United States
@@ -22,7 +22,7 @@ The Federal Communications Commission (FCC) has created a dashboard that tracks 
 
 This data was freely available to download from the Federal Communications Commission. The dataset used in this project can be obtained [here](https://opendata.fcc.gov/Consumer/Consumer-Complaints-Data-Unwanted-Calls/vakf-fz8e).
 
-[Click here to learn more about this project!](Natasha-Vij.github.io/Unwanted-Spam-Calls.html).
+[Click here to learn more about this project!](Natasha-Vij.github.io/Unwanted-Spam-Calls.html)
 
 ## Hate Crimes in the United States (1991-2018)
 In this project, I analyzed hate crimes in the Unted States from 1991-2018. In particular, I looked at what groups are most likely to be targeted, what groups are more likely to commit crimes, where these crimes are happening in the country, and how major political events affect hate crime occurances. 
