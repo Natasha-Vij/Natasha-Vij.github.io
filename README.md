@@ -7,7 +7,7 @@ In this project, I analyzed the overall military, education, and healthcare spen
 
 I obtained my datasets from SIPRI, the World Health Organization, and the World Bank.
 
-[Click here to learn more about this project!](Natasha-Vij/Analysis_Of_Military_Education_and_Healthcare_Spending/GDPObjectives.html)
+[Click here to learn more about this project!](Natasha-Vij/GDPObjectives.html)
 
 ## Analysis of Contemporary Mass Shooters in the United States
 The Stanford Geospatial Center has compiled a dataset that details incidents of mass shootings. My team and I noticed that the dataset contained dimensions related to the shooter, so we decided to craft a SMART research question that would meet all of the criteria of a SMART question. We decided to answer the following question: "Is the contemporary mass shooter in America similar to the average American demographically?"
