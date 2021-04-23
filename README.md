@@ -2,6 +2,12 @@
 
 On this page, you can learn more about the projects I have completed.
 
+## COVID-19 Dashboard
+
+The novel Coronavirus (COVID-19) is a highly infectious disease that has affected virtually every nation in the world. News first broke about this virus that started in Wuhan, China at the end of 2019. 
+This disease continuous to run rampant throughout the world almost half-way through 2021, with new variants emerging regularly. 
+
+The purpose of this project is to visualize which countries are leading in both disease transmission and vaccine administration. This project was created to observe trends that identifies how nations across the world are handling the COVID-19 pandemic. Some of the factors that this project will address include the number of new cases, testing, hospitalization admissions, deaths, and vaccine administration. This project will categorize visualizations based on date, nation, and continent. 
 [Click here to learn more about this project!](Natasha-Vij.github.io/Website/index.html)
 
 ## Analysis of Military, Education, and Healthcare Spending
