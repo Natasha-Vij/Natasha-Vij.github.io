@@ -9,6 +9,7 @@ This disease continuous to run rampant throughout the world almost half-way thro
 
 The purpose of this project is to visualize which countries are leading in both disease transmission and vaccine administration. This project was created to observe trends that identifies how nations across the world are handling the COVID-19 pandemic. Some of the factors that this project will address include the number of new cases, testing, hospitalization admissions, deaths, and vaccine administration. This project will categorize visualizations based on date, nation, and continent. 
 
+
 [Click here to learn more about this project!](Natasha-Vij.github.io/Website/index.html)
 
 ## Analysis of Military, Education, and Healthcare Spending
